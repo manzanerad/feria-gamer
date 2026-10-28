@@ -6,6 +6,7 @@ var minigame_slot = $MinigameSlot
 var timer_label = $CanvasLayer/HUD/TimeLeftLabel
 
 var timer: float = 30.000
+var game_over: bool = false
 
 const MinigameScene: PackedScene = preload("res://scenes/test_minigame.tscn")
 
@@ -21,24 +22,30 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if timer > 0:
-		timer -= delta
-		timer_label.text = "%.3f" % timer
-	else:
-		game_over()
+	if game_over:
+		return
 	
-
-func game_over() -> void:
-	timer = 0
+	timer -= delta
+	
+	if timer <= 0:
+		timer = maxf(timer, 0)
+		game_over = true
+		print("game over")
+	
+	
+	
 	timer_label.text = "%.3f" % timer
-	print("game over")
+	
+	
 	
 
 
 func timer_gain(score):
-	print("gained score: " + str(score))
-	timer += (score/10) * 10
+	if not game_over:
+		timer += score
+		print("gained score: " + str(score))
 
 func timer_loss():
-	print("womp womp")
-	timer -= 3
+	if not game_over:
+		print("womp womp")
+		timer -= 3

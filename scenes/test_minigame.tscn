@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://f5ln2q5q21vh"]
+
+[ext_resource type="Script" uid="uid://wtemxlh5u025" path="res://scenes/test_minigame.gd" id="1_ivmg3"]
+
+[node name="TestMinigame" type="Control" unique_id=1722614093]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ivmg3")
+
+[node name="Win" type="Button" parent="." unique_id=1321919540]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 176.0
+offset_right = 307.0
+offset_bottom = 340.0
+text = "ganar"
+
+[node name="Lose" type="Button" parent="." unique_id=633440484]
+layout_mode = 0
+offset_left = 649.0
+offset_top = 222.0
+offset_right = 739.0
+offset_bottom = 301.0
+text = "perder
+"
+
+[connection signal="pressed" from="Win" to="." method="_on_win_pressed"]
+[connection signal="pressed" from="Lose" to="." method="_on_lose_pressed"]

@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://cfwq3cqteuwv1"]
 
+[ext_resource type="Script" uid="uid://db4ovuw1g2311" path="res://scenes/main.gd" id="1_o5qli"]
+
 [node name="Main" type="Control" unique_id=2093131847]
 layout_mode = 3
 anchors_preset = 15
@@ -7,9 +9,40 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_o5qli")
 
-[node name="Label" type="Label" parent="." unique_id=2090029367]
+[node name="MinigameSlot" type="Control" parent="." unique_id=390918939]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1202490534]
+
+[node name="TimeLeftLabel" type="Label" parent="CanvasLayer" unique_id=914747929]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="ResultsScreen" type="Control" parent="." unique_id=942454170]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ResultsLabel" type="Label" parent="ResultsScreen" unique_id=188587181]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
-text = "poop"
+
+[node name="ChoiceScreen" type="Control" parent="." unique_id=1027645474]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="OptionA" type="Button" parent="ChoiceScreen" unique_id=1076784278]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="OptionB" type="Button" parent="ChoiceScreen" unique_id=1765408250]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0

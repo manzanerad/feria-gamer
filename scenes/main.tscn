@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://db4ovuw1g2311" path="res://scenes/main.gd" id="1_o5qli"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_o5qli"]
+
 [node name="Main" type="Control" unique_id=2093131847]
 layout_mode = 3
 anchors_preset = 15
@@ -51,20 +53,6 @@ offset_left = 150.0
 offset_top = 70.0
 offset_right = 190.0
 offset_bottom = 93.0
-
-[node name="ChoiceScreen" type="Control" parent="." unique_id=1027645474]
-anchors_preset = 0
-offset_left = 33.0
-offset_top = 29.0
-offset_right = 73.0
-offset_bottom = 69.0
-
-[node name="OptionA" type="Button" parent="ChoiceScreen" unique_id=1076784278]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-
-[node name="OptionB" type="Button" parent="ChoiceScreen" unique_id=1765408250]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+text = "RESULTADO
+"
+label_settings = SubResource("LabelSettings_o5qli")

@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://dbn0m1224v3a7"]
+
+[ext_resource type="Script" uid="uid://d4jvf7qfmpo6p" path="res://scenes/test_minigame_b.gd" id="1_5c3b5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nvotg"]
+font_size = 48
+
+[node name="TestMinigameB" type="Control" unique_id=55153307]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5c3b5")
+
+[node name="Win" type="Button" parent="." unique_id=774124218]
+layout_mode = 0
+offset_left = 93.0
+offset_top = 214.0
+offset_right = 353.0
+offset_bottom = 338.0
+text = "ganar"
+
+[node name="Lose" type="Button" parent="." unique_id=1092340158]
+layout_mode = 0
+offset_left = 762.0
+offset_top = 216.0
+offset_right = 991.0
+offset_bottom = 362.0
+text = "perder"
+
+[node name="Label" type="Label" parent="." unique_id=155663403]
+layout_mode = 0
+offset_left = 403.0
+offset_top = 53.0
+offset_right = 678.0
+offset_bottom = 150.0
+text = "minigame B"
+label_settings = SubResource("LabelSettings_nvotg")
+
+[connection signal="pressed" from="Win" to="." method="_on_win_pressed"]
+[connection signal="pressed" from="Lose" to="." method="_on_lose_pressed"]

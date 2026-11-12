@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://ceh3lmgpund42"]
+
+[ext_resource type="Script" uid="uid://6t4bsks53fak" path="res://scenes/minigames/drawing_minigame.gd" id="1_kxi54"]
+
+[node name="DrawingMinigame" type="Node2D" unique_id=1800347464]
+script = ExtResource("1_kxi54")
+
+[node name="Outline" type="Line2D" parent="." unique_id=989562040]
+points = PackedVector2Array(330, 51, 639, 51, 638, 284, 327, 281)
+closed = true
+width = 15.0

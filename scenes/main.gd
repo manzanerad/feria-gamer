@@ -12,10 +12,11 @@ var minigames_passed: int = 0
 var minigames_won: int = 0
 var results_screen_timer: float = 3
 
+const DrawingMinigame: PackedScene = preload("res://scenes/minigames/drawing_minigame.tscn")
 const MinigameAScene: PackedScene = preload("res://scenes/test_minigame_a.tscn")
 const MinigameBScene: PackedScene = preload("res://scenes/test_minigame_b.tscn")
 
-var minigames: Array[PackedScene] = [MinigameAScene, MinigameBScene]
+var minigames: Array[PackedScene] = [MinigameAScene, MinigameBScene, DrawingMinigame]
 
 
 
